@@ -1,0 +1,134 @@
+html, body{
+	height:100%;
+}
+
+body{
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center!important;
+	overflow: hidden;
+	background-color: black;
+}
+
+canvas{
+	position:fixed!important;
+	z-index: -1!important;
+}
+
+div.row{
+	height:100%;
+	bottom:20px;
+	position:relative;
+}
+
+div.page-header{
+	border:0; 
+	background-color: transparent;   
+	z-index: 100;
+	position:relative;
+	margin-top:5px;
+}
+
+h1#julien{ 
+	color:transparent; 
+	margin: 0;
+	font-size:40px;
+}
+
+p.indicators{
+	color:white;
+	margin:0;
+	font-size: 40px;
+}
+
+#moveMouse{
+	top:20px;
+	position: relative;
+}
+
+#clickSphere{
+	top:20px;
+	position: relative;
+	display: none;
+}
+
+#entryPoint{
+	transition-property: transform;
+    transition-duration: 10s;
+}
+
+#entryPoint:hover{
+	animation-name: fading;
+	animation-delay:0s;
+	animation-duration: 7s;
+	-webkit-animation: fading 7s infinite;
+	/*animation-iteration-count:infinite;*/ /* Use actual numbers for limited repeat */
+	animation-timing-function:linear; /* For a steady rate loop */
+}
+
+@font-face {
+	font-family: 'Pacifico';
+	src: url('font/Pacifico/Pacifico-Regular.ttf') format("truetype");
+ 
+	font-family: 'Roboto';
+	src: url('font/Pacifico/Roboto-Regular.ttf') format("truetype");
+ 	
+ 	/*Incorporate the different version for the different browser*/
+}
+
+.text_style{
+	font-family: 'Pacifico', cursive, 'Roboto', sans-serif;
+	text-decoration: none;
+	text-align: center;
+}
+
+.dimension{
+	height: 150px; 
+	background-color: transparent;
+	background: none;
+	border:none;
+}
+
+.circle{
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	height: 50px;
+	width:50px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	position: relative;
+	margin: auto;
+	top: 31px;
+	z-index: 100;
+}
+
+
+@keyframes fading {
+    0%   { background: black; }
+    44%  { background: cyan; }
+    66%  { background: white; }
+    100% { background: black; }
+}
+
+@-webkit-keyframes fading {
+    0%   { background: black; }
+    44%  { background: cyan; }
+    66%  { background: white; }
+    100% { background: black; }
+}
+@keyframes opacityfading {
+    0%   { opacity: 0; }
+    33%  { opacity: 1; }
+    66%  { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes opacityfading {
+    0%   { opacity: 0; }
+    33%  { opacity: 1; }
+    66%  { opacity: 0; }
+    100% { opacity: 1; }
+}

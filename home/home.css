@@ -1,0 +1,256 @@
+html, body{
+	height:100%;
+}
+
+body{
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center!important;
+	overflow: hidden;
+	background-color: black;
+}
+
+canvas{
+	position:fixed!important;
+	z-index: -1!important;
+}
+
+div.row{
+	height:100%;
+	bottom:20px;
+	position:relative;
+}
+
+div.page-header{
+	border:0; 
+	background-color: transparent;   
+	z-index: 100;
+	position:relative;
+	margin-top:5px;
+}
+
+h1#julien{ 
+	color:white; 
+	margin: 0;
+	font-size:40px;
+	bottom: 45px;
+	position: relative;
+}
+
+p.indicators{
+	color:white;
+	margin:0;
+	font-size: 20px;
+}
+
+@font-face {
+	font-family: 'Pacifico';
+	src: url('font/Pacifico/Pacifico-Regular.ttf') format("truetype");
+ 
+	font-family: 'Roboto';
+	src: url('font/Pacifico/Roboto-Regular.ttf') format("truetype");
+ 	
+ 	/*Incorporate the different version for the different browser*/
+}
+
+.text_style{
+	font-family: 'Pacifico', cursive, 'Roboto', sans-serif;
+	text-decoration: none;
+	text-align: center;
+}
+
+.dimension{
+	height: 150px; 
+	background-color: transparent;
+	background: none;
+	border:none;
+}
+
+.circle{
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	height: 50px;
+	width:50px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	position: relative;
+	margin: auto;
+	top: 31px;
+	z-index: 100;
+}
+
+.fading_animation_color{
+	transition-property: transform;
+    transition-duration: 10s;
+    animation-name: fading_color;
+	animation-delay:0s;
+	animation-duration: 5s;
+	-webkit-animation: fading_color 5s infinite;
+	/*animation-iteration-count:infinite;*/ /* Use actual numbers for limited repeat */
+	animation-timing-function:linear; /* For a steady rate loop */
+}
+
+
+.fading_animation_bg{
+	transition-property: transform;
+    transition-duration: 10s;
+    animation-name: fading_bg;
+	animation-delay:0s;
+	animation-duration: 5s;
+	-webkit-animation: fading_bg 5s infinite;
+	/*animation-iteration-count:infinite;*/ /* Use actual numbers for limited repeat */
+	animation-timing-function:linear; /* For a steady rate loop */
+}
+
+/*bottom tooltip*/
+.tooltip.bottom > .tooltip-arrow {
+  border-bottom-color: transparent;
+}
+
+/*top tooltip*/
+.tooltip.top > .tooltip-arrow {
+  border-top-color: transparent;
+}
+
+.tooltip > .tooltip-inner {
+  background-color: transparent;
+  text-shadow: none;
+  font-weight: 30px;
+  font-family: 'Pacifico', cursive;
+}
+
+
+#pos_one:hover{
+	animation-name: fading_one;
+	animation-delay: 0s;
+	animation-duration:5s;
+	-webkit-animation: fading_one 5s infinite;
+	/*animation-iteration-count:infinite;*/ /* Use actual numbers for limited repeat */
+	animation-timing-function:linear; 
+}
+
+#pos_two:hover{
+	animation-name: fading_two;
+	animation-delay: 0s;
+	animation-duration:5s;
+	-webkit-animation: fading_two 5s infinite;
+	/*animation-iteration-count:infinite;*/ /* Use actual numbers for limited repeat */
+	animation-timing-function:linear; 
+}
+
+
+#pos_three:hover{
+	animation-name: fading_three;
+	animation-delay: 0s;
+	animation-duration:5s;
+	-webkit-animation: fading_three 5s infinite;
+	/*animation-iteration-count:infinite;*/ /* Use actual numbers for limited repeat */
+	animation-timing-function:linear; 
+}
+
+#pos_four:hover{
+	animation-name: fading_four;
+	animation-delay: 0s;
+	animation-duration:5s;
+	-webkit-animation: fading_four 5s infinite;
+	/*animation-iteration-count:infinite;*/ /* Use actual numbers for limited repeat */
+	animation-timing-function:linear; 
+}
+
+@keyframes fading_one {
+    0%   { background: black; }
+    33%  { background: cyan; }
+    66%  { background: pink; }
+    100% { background: black; }
+}
+
+@-webkit-keyframes fading_one {
+    0%   { background-color: black ; }
+    33%  { background-color: cyan; }
+    66%  { background-color: pink; }
+    100% { background-color: black; }
+}
+
+@keyframes fading_two {
+    0%   { background: black; }
+    33%  { background: pink; }
+    66%  { background: yellow; }
+    100% { background: black; }
+}
+
+@-webkit-keyframes fading_two {
+    0%   { background-color: black ; }
+    33%  { background-color: pink; }
+    66%  { background-color: yellow; }
+    100% { background-color: black; }
+}
+
+@keyframes fading_three {
+    0%   { background: black; }
+    33%  { background: yellow; }
+    66%  { background: purple; }
+    100% { background: black; }
+}
+
+@-webkit-keyframes fading_three {
+    0%   { background-color: black ; }
+    33%  { background-color:yellow; }
+    66%  { background-color: purple; }
+    100% { background-color: black; }
+}
+
+@keyframes fading_four {
+    0%   { background: black; }
+    33%  { background: purple; }
+    66%  { background: cyan; }
+    100% { background: black; }
+}
+
+@-webkit-keyframes fading_four {
+    0%   { background-color: black ; }
+    33%  { background-color: purple; }
+    66%  { background-color: cyan; }
+    100% { background-color: black; }
+}
+
+
+@keyframes fading_color {
+    0%   { color: black; }
+    50%  { color: white; }
+    100% { color: black; }
+}
+
+@-webkit-keyframes fading_color {
+    0%   { color: black; }
+    50%  { color: white; }
+    100% { color: black; }
+}
+
+@keyframes fading_bg {
+    0%   { background: black; }
+    50%  { background: white; }
+    100% { background: black; }
+}
+
+@-webkit-keyframes fading_bg {
+    0%   { background: black; }
+    50%  { background: white; }
+    100% { background: black; }
+}
+
+@keyframes opacityfading {
+    0%   { opacity: 0; }
+    33%  { opacity: 1; }
+    66%  { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes opacityfading {
+    0%   { opacity: 0; }
+    33%  { opacity: 1; }
+    66%  { opacity: 0; }
+    100% { opacity: 1; }
+}
